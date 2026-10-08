@@ -1452,39 +1452,39 @@ dhanyawad*/
 //     return 0; 
 // }
 
-#include <bits/stdc++.h>
-using namespace std;
+// #include <bits/stdc++.h>
+// using namespace std;
 
-int main(){
-    int arr[6]= {2,3,4,4,4,5};
-    int target = 4;
-    int low = 0;
-    int high = 5;
+// int main(){
+//     int arr[6]= {2,3,4,4,4,5};
+//     int target = 4;
+//     int low = 0;
+//     int high = 5;
 
-    int answer = 0;
-    bool found = false;
+//     int answer = 0;
+//     bool found = false;
 
-    while(low<=high){
+//     while(low<=high){
 
-        int mid = (low+high)/2;
+//         int mid = (low+high)/2;
 
-        if(arr[mid]==target){
-            answer = mid;
-            found =true;
-            low = mid+1;
-        }
-        else if(arr[mid]<target){
-            low = mid+1;
-        }
-        else{
-            high = mid -1;
-        }
-    }
-    if(found){
-        cout<<"the last occurence is at = "<<answer;
-    }
-    else{
-        cout<<"not appered ";
-    }
-    return 0;
-}
+//         if(arr[mid]==target){
+//             answer = mid;
+//             found =true;
+//             low = mid+1;
+//         }
+//         else if(arr[mid]<target){
+//             low = mid+1;
+//         }
+//         else{
+//             high = mid -1;
+//         }
+//     }
+//     if(found){
+//         cout<<"the last occurence is at = "<<answer;
+//     }
+//     else{
+//         cout<<"not appered ";
+//     }
+//     return 0;
+// }
