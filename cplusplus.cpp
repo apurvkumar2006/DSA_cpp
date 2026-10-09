@@ -1488,3 +1488,57 @@ dhanyawad*/
 //     }
 //     return 0;
 // }
+
+#include <bits/stdc++.h>
+using namespace std ;
+
+int main(){
+    int arr[6]= {2,3,3,3,4,5};
+    int target = 3;
+    int high = 5;
+    int low = 0;
+    bool found = false;
+    bool foundd = false;
+    int last_index = 0;
+    int first_index = 0;
+
+    while(low<=high){
+        int mid = (low+high)/2;
+
+        if(arr[mid]==target){
+            last_index=mid;
+            found = true;
+            low=mid+1;
+        }
+        else if(arr[mid]<target){
+            low = mid+1;
+        }
+        else{
+            high = mid-1;
+        }
+        
+    }
+    high = 5;
+    low = 0;
+    while(low<=high){
+        int mid = (low+high)/2;
+
+        if(arr[mid]==target){
+            first_index=mid;
+            foundd= true;
+            high=mid-1;
+        }
+        else if(arr[mid]>target){
+            high = mid-1;
+        }
+        else{
+            low = mid+1;
+        }
+         
+    }
+    int frequency = (last_index-first_index)+1;
+    cout<<"the frequency of num is = "<<frequency;
+    
+
+    return 0;
+}
